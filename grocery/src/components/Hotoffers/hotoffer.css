@@ -1,0 +1,19 @@
+.product-Desc {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .productPrice {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .product-cart {
+    background-color: aquamarine;
+    margin-top: 10px;
+  }
+  
