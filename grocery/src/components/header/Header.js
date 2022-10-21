@@ -42,6 +42,7 @@ const Header = () => {
 		</div>
 		<div class="clearfix"> </div>
 	</div>
+  {/* delete this commit */}
 {/* 
 	<script>
 	$(document).ready(function() {
