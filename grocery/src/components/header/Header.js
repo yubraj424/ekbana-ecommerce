@@ -5,7 +5,7 @@ const Header = () => {
     <div>
       	<div class="agileits_header">
 		<div class="w3l_offers">
-			<a href="products.html">Today's special Offers !</a>
+			<a href="/product">Today's special Offers !</a>
 		</div>
 		<div class="w3l_search">
 			<form action="#" method="post">
@@ -29,8 +29,8 @@ const Header = () => {
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-								<li><a href="login.html">Login</a></li> 
-								<li><a href="login.html">Sign Up</a></li>
+								<li><a href="/login">Login</a></li> 
+								<li><a href="/login">Sign Up</a></li>
 							</ul>
 						</div>                  
 					</div>	
@@ -38,11 +38,10 @@ const Header = () => {
 			</ul>
 		</div>
 		<div class="w3l_header_right1">
-			<h2><a href="mail.html">Contact Us</a></h2>
+			<h2><a href="/contact">Contact Us</a></h2>
 		</div>
 		<div class="clearfix"> </div>
 	</div>
-  {/* delete this commit */}
 {/* 
 	<script>
 	$(document).ready(function() {

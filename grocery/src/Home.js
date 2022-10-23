@@ -1,8 +1,14 @@
 import React from 'react'
+import Banner from './components/Banner/Banner'
+import Hotoffers from './components/Hotoffers/Hotoffers'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+        <Banner />
+        <Hotoffers />
+        
+    </div>
   )
 }
 

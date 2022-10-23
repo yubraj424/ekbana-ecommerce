@@ -11,29 +11,29 @@ const Footer = () => {
 			<div class="col-md-3 w3_footer_grid">
 				<h3>information</h3>
 				<ul class="w3_footer_grid_list">
-					<li><a href="events.html">Events</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="products.html">Best Deals</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="short-codes.html">Short Codes</a></li>
+					<li><a href="/events">Events</a></li>
+					<li><a href="/about">About Us</a></li>
+					<li><a href="/product">Best Deals</a></li>
+					<li><a href="/service">Services</a></li>
+					<li><a href="/shortcode">Short Codes</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3 w3_footer_grid">
 				<h3>policy info</h3>
 				<ul class="w3_footer_grid_list">
-					<li><a href="faqs.html">FAQ</a></li>
-					<li><a href="privacy.html">privacy policy</a></li>
-					<li><a href="privacy.html">terms of use</a></li>
+					<li><a href="/faq">FAQ</a></li>
+					<li><a href="/privacy">privacy policy</a></li>
+					<li><a href="/privacy">terms of use</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3 w3_footer_grid">
 				<h3>what in stores</h3>
 				<ul class="w3_footer_grid_list">
-					<li><a href="pet.html">Pet Food</a></li>
-					<li><a href="frozen.html">Frozen Snacks</a></li>
-					<li><a href="kitchen.html">Kitchen</a></li>
-					<li><a href="products.html">Branded Foods</a></li>
-					<li><a href="household.html">Households</a></li>
+					<li><a href="/pet">Pet Food</a></li>
+					<li><a href="/frozen">Frozen Snacks</a></li>
+					<li><a href="/kitchen">Kitchen</a></li>
+					<li><a href="/product">Branded Foods</a></li>
+					<li><a href="/household">Households</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3 w3_footer_grid">
