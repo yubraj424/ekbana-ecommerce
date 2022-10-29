@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const StickyNavbar = () => {
   return (
@@ -23,73 +23,73 @@ const StickyNavbar = () => {
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
               <ul class="nav navbar-nav nav_1">
                 <li>
-                  <a href="/product">Branded Foods</a>
+                  <Link to="/product">Branded Foods</Link>
                 </li>
                 <li>
-                  <a href="/household">Households</a>
+                  <Link to="/household">Households</Link>
                 </li>
                 <li class="dropdown mega-dropdown active">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <Link to="#" class="dropdown-toggle" data-toggle="dropdown">
                     Veggies & Fruits<span class="caret"></span>
-                  </a>
+                  </Link>
                   <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                     <div class="w3ls_vegetables">
                       <ul>
                         <li>
-                          <a href="/vegetables">Vegetables</a>
+                          <Link to="/vegetables">Vegetables</Link>
                         </li>
                         <li>
-                          <a href="/vegetables">Fruits</a>
+                          <Link to="/vegetables">Fruits</Link>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <a href="/kitchen">Kitchen</a>
+                  <Link to="/kitchen">Kitchen</Link>
                 </li>
                 <li>
-                  <a href="/shortcode">Short Codes</a>
+                  <Link to="/shortcode">Short Codes</Link>
                 </li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <Link to="#" class="dropdown-toggle" data-toggle="dropdown">
                     Beverages<span class="caret"></span>
-                  </a>
+                  </Link>
                   <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                     <div class="w3ls_vegetables">
                       <ul>
                         <li>
-                          <a href="/drinks">Soft Drinks</a>
+                          <Link to="/drinks">Soft Drinks</Link>
                         </li>
                         <li>
-                          <a href="/drinks">Juices</a>
+                          <Link to="/drinks">Juices</ Link>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <a href="/pet">Pet Food</a>
+                  <Link to="/pet">Pet Food</Link>
                 </li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <Link to="#" class="dropdown-toggle" data-toggle="dropdown">
                     Frozen Foods<span class="caret"></span>
-                  </a>
+                  </Link>
                   <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                     <div class="w3ls_vegetables">
                       <ul>
                         <li>
-                          <a href="/frozen">Frozen Snacks</a>
+                          <Link to="/frozen">Frozen Snacks</Link>
                         </li>
                         <li>
-                          <a href="/frozen">Frozen Nonveg</a>
+                          <Link to="/frozen">Frozen Nonveg</Link>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <a href="/bread">Bread & Bakery</a>
+                  <Link to="/bread">Bread & Bakery</Link>
                 </li>
               </ul>
             </div>

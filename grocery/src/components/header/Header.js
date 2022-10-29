@@ -1,15 +1,15 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
 const Header = () => {
   return (
     <div>
       	<div class="agileits_header">
 		<div class="w3l_offers">
-			<a href="/product">Today's special Offers !</a>
+			<Link to="/product">Today's special Offers !</Link>
 		</div>
 		<div class="w3l_search">
 			<form action="#" method="post">
-				<input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required=""/>
+				<input type="text" name="Product" value="Search Link product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Link product...';}" required=""/>
 				<input type="submit" value=" "/>
 			</form>
 		</div>
@@ -25,12 +25,12 @@ const Header = () => {
 		<div class="w3l_header_right">
 			<ul>
 				<li class="dropdown profile_details_drop">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
+					<Link to="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></Link>
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-								<li><a href="/login">Login</a></li> 
-								<li><a href="/login">Sign Up</a></li>
+								<li><Link to="/login">Login</Link></li> 
+								<li><Link to="/login">Sign Up</Link></li>
 							</ul>
 						</div>                  
 					</div>	
@@ -38,7 +38,7 @@ const Header = () => {
 			</ul>
 		</div>
 		<div class="w3l_header_right1">
-			<h2><a href="/contact">Contact Us</a></h2>
+			<h2><Link to="/contact">Contact Us</Link></h2>
 		</div>
 		<div class="clearfix"> </div>
 	</div>

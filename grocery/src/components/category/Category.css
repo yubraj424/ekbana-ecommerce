@@ -1,0 +1,27 @@
+.product-Descc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .productPrice {
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .product-cartt {
+height: 30%;
+    margin-top: 10px;
+   
+  }
+  .category-containeror{
+    padding: 10px;
+    background-color: brown;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 80%;
+  }

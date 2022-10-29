@@ -1,10 +1,13 @@
 import React from 'react'
+import './Newsletter.css'
 
 function Newsletter() {
   return (
     <div>
       
-	<div class="newsletter">
+	<div class="">
+		<div className='newslettercontent'>
+
 		<div class="container">
 			<div class="w3agile_newsletter_left">
 				<h3>sign up for our newsletter</h3>
@@ -16,6 +19,7 @@ function Newsletter() {
 				</form>
 			</div>
 			<div class="clearfix"> </div>
+		</div>
 		</div>
 	</div>
 
