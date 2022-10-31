@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Category.css";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/Cart";
 
-// const Categories=()=>{
-//     return(
-//         <div>
-//             hello
-//         </div>
-//     )
-// }
 const Categories = () => {
+  const dispatch = useDispatch();
+  // function ma same mapping ko naam(data) pathauna parxa
+  const handlerAddToCart = (data) => {
+    dispatch(addToCart(data));
+  };
+
   const [catagorylist, setCategorylist] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     axios
       .get("https://uat.ordering-farmshop.ekbana.net/api/v4/category", {
@@ -21,93 +23,72 @@ const Categories = () => {
       .then((response) => {
         console.log(response.data.data, "catagory");
         setCategorylist(response.data.data);
+        setIsLoading(!true);
         // console.log(catagorylist, "nepal");
       })
       .catch((error) => {
         console.log(error, "faileddd");
       });
   }, [setCategorylist]);
+
   return (
-    <div className="category-containeror">
-      {catagorylist.slice(0,6).map((data, index) => {
-        return (
-          <>
-            <div class="col-md-4 top_brand_left product-cartt">
-              <div class="hover14 column">
-                <div class="agile_top_brand_left_grid">
-                  <div class="agile_top_brand_left_grid_pos">
-                    <img
-                      src="assets/images/offer.png"
-                      alt=" "
-                      class="img-responsive"
-                    />
-                  </div>
-                  <div class="product-Descc">
-                    <img
-                      src={data.backgroundImage}
-                      width="200px"
-                      height="120px"
-                    />
-                    <p>{data.title}</p>
+    <>
+      {isLoading ? (
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            fontSize: "32px",
+          }}
+        >
+          Loading...
+        </p>
+      ) : (
+        <div className="category-containeror">
+          {catagorylist.slice(0, 6).map((data, index) => {
+            return (
+              <>
+                <div class="col-md-4 top_brand_left product-cartt">
+                  <div class="hover14 column">
+                    <div class="agile_top_brand_left_grid">
+                      <div class="agile_top_brand_left_grid_pos">
+                        <img
+                          src="assets/images/offer.png"
+                          alt=" "
+                          class="img-responsive"
+                        />
+                      </div>
+                      <div class="product-Descc">
+                        <img
+                          src={data.backgroundImage}
+                          width="200px"
+                          height="120px"
+                        />
+                        <p>{data.title}</p>
 
-                    <p>ProductCount: {data.productCount}</p>
-                  </div>
-
-                  <div class="agile_top_brand_left_grid1">
-                    <figure>
-                      <div class="snipcart-item block">
-                        <div class="snipcart-details top_brand_home_details">
-                          <form action="#" method="post">
-                            <fieldset>
-                              <input type="hidden" name="cmd" value="_cart" />
-                              <input type="hidden" name="add" value="1" />
-                              <input type="hidden" name="business" value=" " />
-                              <input
-                                type="hidden"
-                                name="item_name"
-                                value="Fortune Sunflower Oil"
-                              />
-                              <input
-                                type="hidden"
-                                name="amount"
-                                value="20.99"
-                              />
-                              <input
-                                type="hidden"
-                                name="discount_amount"
-                                value="1.00"
-                              />
-                              <input
-                                type="hidden"
-                                name="currency_code"
-                                value="USD"
-                              />
-                              <input type="hidden" name="return" value=" " />
-                              <input
-                                type="hidden"
-                                name="cancel_return"
-                                value=" "
-                              />
-                              <input
-                                type="submit"
-                                name="submit"
-                                value="Add to cart"
-                                class="button"
-                              />
-                            </fieldset>
-                          </form>
+                        <p>ProductCount: {data.productCount}</p>
+                        {/* button should be inside mapping's div , function ma mapping ko name(data) as a argument pathauna parcha */}
+                        <div class="snipcart-item block">
+                          <div class="snipcart-details top_brand_home_details">
+                            <input
+                              type="submit"
+                              name="submit"
+                              value="Add to cart"
+                              class="button"
+                              onClick={() => handlerAddToCart(data)}
+                            />
+                          </div>
                         </div>
                       </div>
-                    </figure>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </>
-        );
-      })}
-      
-    </div>
+              </>
+            );
+          })}
+        </div>
+      )}
+    </>
   );
 };
 

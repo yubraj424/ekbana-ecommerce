@@ -1,18 +1,18 @@
 import React from "react";
 import './routers.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Aboutus from "../Aboutus";
-import Home from "../Home";
+import Home from "../view/home/Home";
 import Product from "../components/Product/Product";
-import Contact from "../Contact";
+import Contact from "../components/contact/Contact";
 import SingleProduct from "../SingleProduct";
+import AboutPage from "../view/aboutPage/AboutPage";
 
 import Header from "../components/header/Header";
 import Subheader from "../components/Subheader/Subheader";
 
 import Footer from "../components/footer/Footer";
 
-import Event from "../Event";
+import Event from "../components/event/Event";
 import Login from "../components/loginpageandsignup/Login";
 import Service from "../Service";
 import Privacy from "../components/privacy/Privacy";
@@ -30,6 +30,9 @@ import StickyNavbar from "../components/stickyNavbar/StickyNavbar";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import Test from "../components/test/Test";
 import Categories from "../components/category/Category";
+import Mycart from "../components/mycart/Mycart";
+import Newsletter from "../components/newsletter/Newsletter";
+
 
 const Routers = () => {
   return (
@@ -43,7 +46,7 @@ const Routers = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<Aboutus />} />
+        <Route path="/about" element={<AboutPage/>} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/events" element={<Event />} />
         <Route path="/product" element={<Product />} />
@@ -63,8 +66,12 @@ const Routers = () => {
         <Route path="/faq" element={<Faq />} />
         <Route path="/test" element={<Test />} />
         <Route path="/category" element={<Categories />} />
+        <Route path="/mycart" element={<Mycart/>}/>
+              
       </Routes>
+      <Newsletter/>
 <div className="footer-container">
+
 <Footer />
 </div>
      

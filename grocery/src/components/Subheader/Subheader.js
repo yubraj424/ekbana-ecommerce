@@ -13,7 +13,7 @@ const Subheader = () => {
 				<ul class="special_items">
 					<li><a href="/events">Events</a><i>/</i></li>
 					<li><a href="/about">About Us</a><i>/</i></li>
-					<li><a href="/product">Best Deals</a><i>/</i></li>
+					<li><a href="/category">Best Deals</a><i>/</i></li>
 					<li><a href="/service">Services</a></li>
 				</ul>
 			</div>

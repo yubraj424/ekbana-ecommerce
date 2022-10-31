@@ -2040,7 +2040,7 @@ a.pa_italic:focus {
 }
 .wthree_news_top_serv_btm_grid_icon i{
 	font-size: 2.5em;
-    color: #FA1818;
+ 
 }
 .wthree_news_top_serv_btm_grid h3{
 	font-size:1.2em;
@@ -2062,9 +2062,12 @@ p.animi{
 .agile_about_grid_left ol li{
 	color:#212121;
 	margin-bottom:1.5em;
+
 }
 .agile_about_grid_left ol {
     margin: 0;
+	background-color: red;
+	float: left;
 }
 .agile_about_grids {
     margin: 3em 0 0;
