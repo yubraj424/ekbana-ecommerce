@@ -27,11 +27,12 @@ import Pet from "../components/Product/petfood/Pet";
 import Bread from "../components/Product/breadandbakery/Bread";
 import Drinks from "../components/Product/drinks/Drinks";
 import StickyNavbar from "../components/stickyNavbar/StickyNavbar";
-import Breadcrumb from "../components/breadcrumb/Breadcrumb";
+
 import Test from "../components/test/Test";
 import Categories from "../components/category/Category";
 import Mycart from "../components/mycart/Mycart";
 import Newsletter from "../components/newsletter/Newsletter";
+import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 
 
 const Routers = () => {

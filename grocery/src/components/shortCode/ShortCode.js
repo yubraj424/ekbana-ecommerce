@@ -2,78 +2,16 @@ import React from 'react'
 
 const ShortCode = () => {
   return (
-<div>
+	<div>
     <div class="products-breadcrumb">
 		<div class="container">
 			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">Home</a><span>|</span></li>
+				<li><i class="fa fa-home" aria-hidden="true"></i><a href="">Home</a><span>|</span></li>
 				<li>Short Codes</li>
 			</ul>
 		</div>
 	</div>
-
-
-	<div class="banner">
-		<div class="w3l_banner_nav_left">
-			<nav class="navbar nav_bottom">
-			 
-			  <div class="navbar-header nav_2">
-				  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
-			   </div> 
-			
-				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-					<ul class="nav navbar-nav nav_1">
-						<li><a href="products.html">Branded Foods</a></li>
-						<li><a href="household.html">Households</a></li>
-						<li class="dropdown mega-dropdown active">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>				
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-								<div class="w3ls_vegetables">
-									<ul>	
-										<li><a href="vegetables.html">Vegetables</a></li>
-										<li><a href="vegetables.html">Fruits</a></li>
-									</ul>
-								</div>                  
-							</div>				
-						</li>
-						<li><a href="kitchen.html">Kitchen</a></li>
-						<li><a href="short-codes.html">Short Codes</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-								<div class="w3ls_vegetables">
-									<ul>
-										<li><a href="drinks.html">Soft Drinks</a></li>
-										<li><a href="drinks.html">Juices</a></li>
-									</ul>
-								</div>                  
-							</div>	
-						</li>
-						<li><a href="pet.html">Pet Food</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Frozen Foods<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-								<div class="w3ls_vegetables">
-									<ul>
-										<li><a href="frozen.html">Frozen Snacks</a></li>
-										<li><a href="frozen.html">Frozen Nonveg</a></li>
-									</ul>
-								</div>                  
-							</div>	
-						</li>
-						<li><a href="bread.html">Bread & Bakery</a></li>
-					</ul>
-				 </div>
-			</nav>
-		</div>
-		<div class="w3l_banner_nav_right">
-
-		<div class="typo">
+	<div class="typo">
 			<h3 class="title">Short Codes</h3>
 			<div class="grid_3 grid_4">
 				<h3 class="hdg">Headings</h3>
@@ -108,7 +46,6 @@ const ShortCode = () => {
 					</table>
 				</div>
 			</div>
-
 			<div class="grid_3 grid_5">
 				<h3>Buttons</h3>
 				<h1>
@@ -159,44 +96,7 @@ const ShortCode = () => {
 					<a href="#"><span class="label label-warning">Warning</span></a>
 					<a href="#"><span class="label label-danger">Danger</span></a>
 				</h6>
-			</div>		
-			
-			<div class="grid_3 grid_5">
-				<h3>Progress Bars</h3>
-				<div class="tab-content">
-					<div class="tab-pane active" id="domprogress">
-						<div class="progress">    
-							<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
-						</div>
-						<p>Info with <code>progress-bar-info</code> class.</p>
-						<div class="progress">    
-							<div class="progress-bar progress-bar-info" style="width: 60%"></div>
-						</div>
-						<p>Success with <code>progress-bar-success</code> class.</p>
-						<div class="progress">
-							<div class="progress-bar progress-bar-success" style="width: 30%"></div>
-						</div>
-						<p>Warning with <code>progress-bar-warning</code> class.</p>
-						<div class="progress">
-							<div class="progress-bar progress-bar-warning" style="width: 70%"></div>
-						</div>
-						<p>Danger with <code>progress-bar-danger</code> class.</p>
-						<div class="progress">
-							<div class="progress-bar progress-bar-danger" style="width: 50%"></div>
-						</div>
-						<p>Inverse with <code>progress-bar-inverse</code> class.</p>
-						<div class="progress">
-							<div class="progress-bar progress-bar-inverse" style="width: 40%"></div>
-						</div>
-						<p>Inverse with <code>progress-bar-inverse</code> class.</p>
-						<div class="progress">
-							<div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
-							<div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
-							<div class="progress-bar progress-bar-danger" style="width: 10%"><span class="sr-only">10% Complete (danger)</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
+			</div>	
 			<div class="grid_3 grid_5">
 				<h3>Alerts</h3>
 				<div class="alert alert-success" role="alert">
@@ -211,7 +111,7 @@ const ShortCode = () => {
 				<div class="alert alert-danger" role="alert">
 					<strong>Oh snap!</strong> Change a few things up and try submitting again.
 				</div>
-			</div>
+			</div>	
 			<div class="grid_3 grid_5">
 				<h3>Pagination</h3>
 				<div class="col-md-6">
@@ -248,8 +148,7 @@ const ShortCode = () => {
 							<li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
 						</ul>
 					</nav>
-				</div>
-				<div class="col-md-6">
+				</div><div class="col-md-6">
 					<ul class="pagination pagination-lg">
 						<li class="disabled"><a href="#"><i class="fa fa-angle-left">«</i></a></li>
 						<li class="active"><a href="#">1</a></li>
@@ -336,6 +235,7 @@ const ShortCode = () => {
 						</tbody>
 					</table>                    
 				</div>
+				
 				<div class="col-md-6">
 					<p>Easily highlight new or unread items with the <code>.badge</code> class</p>
 					<div class="list-group list-group-alternate"> 
@@ -411,7 +311,7 @@ const ShortCode = () => {
 						</span>
 						<input type="text" class="form-control" aria-label="..."/>
 					</div>
-				</div>
+				</div></div>
 				<div class="col-lg-6 in-gp-tb">
 					<div class="input-group">
 						<span class="input-group-addon">
@@ -438,8 +338,7 @@ const ShortCode = () => {
 						</span>
 					</div>
 				</div>
-			</div>
-			<div class="row">
+				<div class="row">
 				<div class="col-lg-6 in-gp-tl">
 					<div class="input-group">
 						<div class="input-group-btn">
@@ -508,7 +407,7 @@ const ShortCode = () => {
 					</tbody>
 				</table>
 			</div>
-			<hr class="bs-docs-separator"/>
+				<hr class="bs-docs-separator"/>
 			<p>Add any of the following classes to the <code>.table</code> base class.</p>
 			<p>Adds zebra-striping to any table row within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-8).</p>
 			<div class="bs-docs-example">
@@ -611,17 +510,15 @@ const ShortCode = () => {
 						</tr>
 					</tbody>
 				</table>
-			</div>
-		</div>
-    
-    
-    
-    
-    
-    
-    </div>
+			
+		
+
+
+
+
 </div>
-</div>  )
+</div>
+</div>)
 }
 
 export default ShortCode

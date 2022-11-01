@@ -11,6 +11,7 @@ import {
   Button,
   useDisclosure,
   Text,
+  Select
 } from "@chakra-ui/react";
 import MyCart from "../mycart/Mycart";
 

@@ -3,6 +3,7 @@ import React from 'react'
 function Aboutus() {
   return (
     <div>
+        
     <h3>About Us</h3>
         <div class="privacy about">
             <div>

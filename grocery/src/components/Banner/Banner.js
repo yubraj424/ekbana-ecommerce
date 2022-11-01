@@ -9,7 +9,7 @@ const Banner = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -21,13 +21,13 @@ const Banner = () => {
         {Bannerdata.map((dataa, index) => {
           return (
             <div>
-              <div>
+              <div >
                 <img
                   className="image-slider"
                   src={dataa.image}
                   alt=""
-                  width="950px"
-                  height="400px"
+                  
+                  
                 />
                 <div class="slide-desc">
                   <p>{dataa.text1}</p>

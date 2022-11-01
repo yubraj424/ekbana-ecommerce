@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -16,7 +17,25 @@ const Login = () => {
   } = useForm();
 
   const onSubmitlogin = (data) => {
-    console.log(data, "login");
+    // console.log(data, "login");
+    axios.post("https://uat.ordering-farmshop.ekbana.net/api/v4/auth/login",{
+      client_id:"2",
+      client_secret:'2TJrcyMbXT6gDQXVqeSlRbOKvtTfMsuxfuK6vpey',
+      grant_type: "password",
+        username: data.email,
+        password: data.password
+
+      
+    })
+    .then((response)=>{
+      console.log(response,'loginsucessful')
+    //  access_token chai localStorage ma save garna parxa for authentication 
+      localStorage.setItem("access_token",response.data.access_token)
+    })
+
+    .catch((error)=>{
+      console.log(error,"loginfailed")
+    })
   };
   return (
     <div>
@@ -35,12 +54,12 @@ const Login = () => {
               <>
                 <div class="form">
                   <h2>Login to your account</h2>
-                  <form  onSubmit={handleSubmit((data) => console.log(data))}>
+                  <form  onSubmit={handleSubmit(onSubmitlogin)}>
 				 
-				  <input {...register('userName')} type='text' name='Username' placeholder="Username" />
-				  {errors.userName && <p>Username is required.</p>}
-				  <input {...register('password')} type='text' name="Password" placeholder="Password"/>
-				  {errors.password && <p>Enter a Password</p>}
+				  <input {...register('email',{required:true})} type='text'  placeholder="Username/Email" />
+				  {errors.email && <p style={{color:"red" }}>Username/Email is required.</p>}
+				  <input {...register('password',{required:true})} type='text'  placeholder="Password"/>
+				  {errors.password && <p  style={{color:"red" }}>Enter a Password</p>}
                     <input type="submit" value="Login" />
                   </form>
                 </div>

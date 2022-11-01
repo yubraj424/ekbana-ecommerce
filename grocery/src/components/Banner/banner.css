@@ -1,14 +1,19 @@
 .image-slider {
-    position: relative;
+    /* position: relative; */
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+     width: 1180px;
+    height: 500px;
   }
   
   .slide-desc {
     position: absolute;
-    margin-top: -240px;
-    margin-left: 650px;
-    color: rgb(56, 53, 53);
+    margin-top: -350px;
+    margin-left: 800px;
+    color: rgb(248, 243, 243);
     font-size: 35px;
-    font-weight: 500;
+    font-weight: 800;
   }
   
  .banner-button {

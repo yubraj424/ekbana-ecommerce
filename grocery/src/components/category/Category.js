@@ -13,15 +13,49 @@ const Categories = () => {
 
   const [catagorylist, setCategorylist] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  // categories api start
+  // useEffect(() => {
+  //   axios
+  //     .get("https://uat.ordering-farmshop.ekbana.net/api/v4/category", {
+  //       headers: {
+  //         "Api-Key": "3uxpudnPFywb4AYZjjpbhOHRV3YMTNscyRF4AiVZi2go6brJMx",
+  //       },
+  //     })
+  //     .then((response) => {
+  //       console.log(response.data.data, "catagory");
+  //       setCategorylist(response.data.data);
+  //       setIsLoading(!true);
+  //       // console.log(catagorylist, "nepal");
+  //     })
+  //     .catch((error) => {
+  //       console.log(error, "faileddd");
+  //     });
+  // }, [setCategorylist]);
+  // categories api ends
+const hitHandler=()=>{
+  console.log("clicked")
+
     axios
-      .get("https://uat.ordering-farmshop.ekbana.net/api/v4/category", {
+      .get("https://uat.ordering-farmshop.ekbana.net/api/v4/cart", {
         headers: {
-          "Api-Key": "3uxpudnPFywb4AYZjjpbhOHRV3YMTNscyRF4AiVZi2go6brJMx",
+           "Api-Key": "3uxpudnPFywb4AYZjjpbhOHRV3YMTNscyRF4AiVZi2go6brJMx",
+          " Warehouse-Id":"1",
+           "Authorization":localStorage.getItem('access_token')
         },
-      })
+
+   
+      },
+//       {
+// "productId":"14",
+// "priceId":"14",
+// "quantity":"5",
+// "note":"testing"
+//       }
+  
+      
+      )
       .then((response) => {
-        console.log(response.data.data, "catagory");
+        console.log(response.data.data.color, "product");
         setCategorylist(response.data.data);
         setIsLoading(!true);
         // console.log(catagorylist, "nepal");
@@ -29,10 +63,52 @@ const Categories = () => {
       .catch((error) => {
         console.log(error, "faileddd");
       });
-  }, [setCategorylist]);
+
+  
+  console.log("hii")
+
+
+}
+
+//   useEffect(() => {
+//     axios
+//       .get("https://uat.ordering-farmshop.ekbana.net/api/v4/cart", {
+//         headers: {
+//            "Api-Key": "3uxpudnPFywb4AYZjjpbhOHRV3YMTNscyRF4AiVZi2go6brJMx",
+//           " Warehouse-Id":"1",
+//            "Authorization":localStorage.getItem('access_token')
+//         },
+
+   
+//       },
+// //       {
+// // "productId":"14",
+// // "priceId":"14",
+// // "quantity":"5",
+// // "note":"testing"
+// //       }
+  
+      
+//       )
+//       .then((response) => {
+//         console.log(response.data.data.color, "product");
+//         setCategorylist(response.data.data);
+//         setIsLoading(!true);
+//         // console.log(catagorylist, "nepal");
+//       })
+//       .catch((error) => {
+//         console.log(error, "faileddd");
+//       });
+
+//   }, 
+  
+//   [setCategorylist]);
+  
+//   console.log("hii")
 
   return (
     <>
+     <button onClick={()=>hitHandler()}>hit</button>
       {isLoading ? (
         <p
           style={{
@@ -48,6 +124,7 @@ const Categories = () => {
           {catagorylist.slice(0, 6).map((data, index) => {
             return (
               <>
+             
                 <div class="col-md-4 top_brand_left product-cartt">
                   <div class="hover14 column">
                     <div class="agile_top_brand_left_grid">

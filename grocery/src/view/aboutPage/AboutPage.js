@@ -6,6 +6,7 @@ import Testimonials from '../../components/about/Testimonials'
 const AboutPage = () => {
   return (
     <div>
+     
         <Aboutus />
         <Team />
         <Testimonials />
