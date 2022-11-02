@@ -3,14 +3,14 @@ import React from 'react'
 const ShortCode = () => {
   return (
 	<div>
-    <div class="products-breadcrumb">
+    {/* <div class="products-breadcrumb">
 		<div class="container">
 			<ul>
 				<li><i class="fa fa-home" aria-hidden="true"></i><a href="">Home</a><span>|</span></li>
 				<li>Short Codes</li>
 			</ul>
 		</div>
-	</div>
+	</div> */}
 	<div class="typo">
 			<h3 class="title">Short Codes</h3>
 			<div class="grid_3 grid_4">

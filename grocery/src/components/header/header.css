@@ -1,0 +1,45 @@
+.menu-bar {
+  color: aliceblue;
+}
+
+.sub-menu-1 {
+  color: rgb(255, 255, 255);
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+  display: block;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: -15px;
+  background-color: rgb(199, 236, 37);
+}
+.menu-bar ul li:hover .sub-menu-1 ul {
+  display: block;
+  margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted rgb(199, 236, 37);
+  background: transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  padding-left: 1rem;
+  position: absolute;
+  background-color: #c7c3c3;
+  width: 4.5rem;
+  height: 3rem;
+  color: black;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

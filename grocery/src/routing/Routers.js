@@ -33,6 +33,7 @@ import Categories from "../components/category/Category";
 import Mycart from "../components/mycart/Mycart";
 import Newsletter from "../components/newsletter/Newsletter";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
+import PageNotFound from "../components/errorpage/PageNotFound";
 
 
 const Routers = () => {
@@ -68,6 +69,7 @@ const Routers = () => {
         <Route path="/test" element={<Test />} />
         <Route path="/category" element={<Categories />} />
         <Route path="/mycart" element={<Mycart/>}/>
+        <Route path="/*" element={<PageNotFound/>}/>
               
       </Routes>
       <Newsletter/>

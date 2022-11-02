@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./header.css";
 import { useNavigate } from "react-router-dom";
 import {
   Modal,
@@ -11,7 +12,7 @@ import {
   Button,
   useDisclosure,
   Text,
-  Select
+  Select,
 } from "@chakra-ui/react";
 import MyCart from "../mycart/Mycart";
 
@@ -63,28 +64,39 @@ const Header = () => {
         </div>
         <div class="w3l_header_right">
           <ul>
-            <li class="dropdown profile_details_drop">
-              <Link to="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span class="caret"></span>
-              </Link>
-              <div class="mega-dropdown-menu">
-                <div class="w3ls_vegetables">
-                  <ul class="dropdown-menu drp-mnu">
-                    <li>
-                      <Link to="/login">Login</Link>
-                    </li>
-                    <li>
-                      <Link to="/login">Sign Up</Link>
-                    </li>
-                  </ul>
+            <li class="menu-bar">
+              <Link to="#" class="menu-bar">
+                <div class="dropdown">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+
+                  <div class="dropdown-content">
+                    <div class=" sub-menu-1 ">
+                      <ul>
+                        <li>
+                          <Link to="/login">Login</Link>
+                        </li>
+
+                        <li>
+                          <Link to="/login">Sign Up</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+                <span class="sub-menu-1"></span>
+              </Link>
+              <div class="mega-dropdown-menu"></div>
             </li>
           </ul>
         </div>
-        <div class="w3l_header_right1">
-          <h2>
+        <div
+          class="w3l_header_right1"
+          style={{
+            marginTop: "2rem",
+          }}
+        >
+          <h2 style={{ width: "6rem" }}>
             <Link to="/contact">Contact Us</Link>
           </h2>
         </div>
