@@ -13,6 +13,7 @@ const Payment = () => {
       position: "top-right",
     });
   };
+
   useEffect(() => {
     axios
       .get("https://uat.ordering-farmshop.ekbana.net/api/v4/payment-method", {
@@ -43,6 +44,7 @@ const Payment = () => {
                 <p className="payment-title">{payroll.title}</p>
                 <div className="botton">
                   <button onClick={() => handlepay()}>Pay</button>
+                  <br />
                 </div>
               </div>
             </div>

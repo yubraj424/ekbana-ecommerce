@@ -52,18 +52,18 @@ const Banner = () => {
           <div class="col-md-4 wthree_banner_bottom_left">
             <div class="wthree_banner_bottom_left_grid">
               <img src="assets/images/5.jpg" alt=" " class="img-responsive" />
-              <div class="wthree_banner_btm_pos">
+              {/* <div class="wthree_banner_btm_pos">
                 <h3>
                   introducing <span>best store</span> for <i>groceries</i>
                 </h3>
-              </div>
+              </div> */}
             </div>
           </div>
           <div class="col-md-4 wthree_banner_bottom_left">
             <div class="wthree_banner_bottom_left_grid">
               <img src="assets/images/6.jpg" alt=" " class="img-responsive" />
-              <div class="wthree_banner_btm_pos1">
-                <h3>
+              <div class="wthree_banner_btm_pos1" style={{ fontSize: "12px" }}>
+                <h3 style={{ width: "200px" }}>
                   Save <span>Upto</span> $10
                 </h3>
               </div>

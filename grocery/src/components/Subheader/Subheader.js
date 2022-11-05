@@ -6,7 +6,7 @@ const Subheader = () => {
       <div class="logo_products">
         <div class="container">
           <div class="w3ls_logo_products_left">
-            <h1>
+            <h1 style={{ fontSize: "32px" }}>
               <a href="/">
                 <span>Grocery</span> Store
               </a>

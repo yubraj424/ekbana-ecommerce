@@ -28,7 +28,6 @@ import Bread from "../components/Product/breadandbakery/Bread";
 import Drinks from "../components/Product/drinks/Drinks";
 import StickyNavbar from "../components/stickyNavbar/StickyNavbar";
 
-import Test from "../components/test/Test";
 import Categories from "../components/category/Category";
 import Mycart from "../components/mycart/Mycart";
 import Newsletter from "../components/newsletter/Newsletter";
@@ -36,6 +35,8 @@ import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import PageNotFound from "../components/errorpage/PageNotFound";
 import Payment from "../components/payment/Payment";
 import Hotoffers from "../components/Hotoffers/Hotoffers";
+import Checkout from "../view/checkoutpage/Checkout";
+import Practice from "../components/practice/Practice";
 
 const Routers = () => {
   return (
@@ -68,12 +69,14 @@ const Routers = () => {
             <Route path="/pet" element={<Pet />} />
             <Route path="/vegetables" element={<Vegetables />} />
             <Route path="/faq" element={<Faq />} />
-            <Route path="/test" element={<Test />} />
+
             <Route path="/category" element={<Categories />} />
             <Route path="/mycart" element={<Mycart />} />
             <Route path="/*" element={<PageNotFound />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/hotoffers" element={<Hotoffers />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/practice" element={<Practice />} />
           </Routes>
         </div>
       </div>
