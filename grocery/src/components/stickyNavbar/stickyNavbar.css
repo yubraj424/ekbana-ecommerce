@@ -1,13 +1,14 @@
 .sticky-bar-container {
-  display: inline;
+  sdisplay: inline;
 }
 .dropdown {
   position: relative;
   display: flex;
 
-  padding: 1rem 2rem;
-
-  font-style: lightgray;
+  padding: 0.65rem 2rem;
+  width: 200px;
+  /* 
+  font-style: lightgray; */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -26,5 +27,5 @@
   display: block;
 }
 .dropdown:hover {
-  background-color: green;
+  background-color: rgb(142, 199, 19);
 }

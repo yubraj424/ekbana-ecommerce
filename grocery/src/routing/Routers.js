@@ -1,5 +1,5 @@
 import React from "react";
-import './routers.css'
+import "./routers.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../view/home/Home";
 import Product from "../components/Product/Product";
@@ -34,7 +34,8 @@ import Mycart from "../components/mycart/Mycart";
 import Newsletter from "../components/newsletter/Newsletter";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import PageNotFound from "../components/errorpage/PageNotFound";
-
+import Payment from "../components/payment/Payment";
+import Hotoffers from "../components/Hotoffers/Hotoffers";
 
 const Routers = () => {
   return (
@@ -42,42 +43,44 @@ const Routers = () => {
       <Header />
       <Subheader />
       <Breadcrumb />
-      <div style={{backgroundColor:'red',width:'80%'}}>
-        <StickyNavbar />
+      <div className="router-container">
+        <div className="router-sidebar">
+          <StickyNavbar />
+        </div>
+        <div className="router-pages">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/events" element={<Event />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/singleproduct/:id" element={<SingleProduct />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/shortcode" element={<ShortCode />} />
+
+            <Route path="/bread" element={<Bread />} />
+            <Route path="/drinks" element={<Drinks />} />
+            <Route path="/frozen" element={<Frozen />} />
+            <Route path="/household" element={<Household />} />
+            <Route path="/kitchen" element={<Kitchen />} />
+            <Route path="/pet" element={<Pet />} />
+            <Route path="/vegetables" element={<Vegetables />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/test" element={<Test />} />
+            <Route path="/category" element={<Categories />} />
+            <Route path="/mycart" element={<Mycart />} />
+            <Route path="/*" element={<PageNotFound />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/hotoffers" element={<Hotoffers />} />
+          </Routes>
+        </div>
       </div>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage/>} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/events" element={<Event />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/singleproduct/:id" element={<SingleProduct />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/shortcode" element={<ShortCode />} />
-
-        <Route path="/bread" element={<Bread />} />
-        <Route path="/drinks" element={<Drinks />} />
-        <Route path="/frozen" element={<Frozen />} />
-        <Route path="/household" element={<Household />} />
-        <Route path="/kitchen" element={<Kitchen />} />
-        <Route path="/pet" element={<Pet />} />
-        <Route path="/vegetables" element={<Vegetables />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/category" element={<Categories />} />
-        <Route path="/mycart" element={<Mycart/>}/>
-        <Route path="/*" element={<PageNotFound/>}/>
-              
-      </Routes>
-      <Newsletter/>
-<div className="footer-container">
-
-<Footer />
-</div>
-     
+      <Newsletter />
+      <div className="footer-container">
+        <Footer />
+      </div>
     </Router>
   );
 };

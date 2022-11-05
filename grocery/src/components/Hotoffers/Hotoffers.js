@@ -1,69 +1,151 @@
-import React from "react";
-import "./Hotdata";
-import Hotdata from "./Hotdata";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import sellingData from "./sellingData";
 import "./hotoffer.css";
+// import sellingData1 from "./sellingData2";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/Cart";
 
 const Hotoffers = () => {
-  return (
-    <div>
-        {Hotdata.map((data,index)=>{return(
-            <div>
+  const Navigate = useNavigate();
 
-      <div class="col-md-3 top_brand_left">
-        <div class="hover14 column">
-          <div class="agile_top_brand_left_grid">
-            <div class="agile_top_brand_left_grid_pos">
-              <img src="images/offer.png" alt=" " class="img-responsive" />
-            </div>
-            <div class="agile_top_brand_left_grid1">
-              <figure>
-                <div class="snipcart-item block">
-                  <div class="product-Desc">
-                    <img src="" alt="image" />
-                    <p>{data.text}</p>
-                    <div className="productPrice">
-                      <p>${data.price}</p>
-                      <p>${data.discount}</p>
-                    </div>
-                    
+  const dispatch = useDispatch();
+  const handleAddToCart = (data) => {
+    if (localStorage.getItem("access_token") !== null) {
+      dispatch(addToCart(data));
+      Navigate("/mycart");
+    } else {
+      Navigate("/login");
+    }
+  };
+
+  const [sellingitem, setSellingitem] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://uat.ordering-farmshop.ekbana.net/api/v4/product?allProduct=1",
+        {
+          headers: {
+            "Api-Key": "3uxpudnPFywb4AYZjjpbhOHRV3YMTNscyRF4AiVZi2go6brJMx",
+            "Warehouse-Id": "1",
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data.data);
+        setSellingitem(res.data.data.slice(0, 6));
+        setIsLoading(!isLoading);
+      })
+      .catch((err) => {
+        console.log(err, "sorry");
+      });
+  }, [setSellingitem]);
+
+  return (
+    <div class="top-brands">
+      <div class="container">
+        <div className="container-offer">
+          <h2
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "32px",
+              textDecoration: "underline",
+            }}
+          >
+            Hot Offers
+          </h2>
+          <div class="grid_3 grid_5">
+            <div
+              class="bs-example bs-example-tabs"
+              role="tabpanel"
+              data-example-id="togglable-tabs"
+            >
+              {isLoading ? (
+                <>
+                  <p
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      fontSize: "32px",
+                    }}
+                  >
+                    Loading....
+                  </p>
+                </>
+              ) : (
+                <>
+                  <div>
+                    {sellingitem.map((data, index) => {
+                      return (
+                        <>
+                          <div class="col-md-4 top_brand_left product-cart">
+                            <div class="hover14 column">
+                              <div class="agile_top_brand_left_grid">
+                                <div class="agile_top_brand_left_grid_pos">
+                                  <img
+                                    src="assets/images/offer.png"
+                                    alt=" "
+                                    class="img-responsive"
+                                  />
+                                </div>
+                                <div class="product-Desc">
+                                  {data.images.map((imgdata, index) => {
+                                    return (
+                                      <>
+                                        <img
+                                          src={imgdata.imageName}
+                                          alt=""
+                                          width="100px"
+                                          height="70px"
+                                        />
+                                      </>
+                                    );
+                                  })}
+
+                                  <p>ItemName:{data.title}</p>
+                                  <p>Category: {data.categoryTitle}</p>
+
+                                  {data.unitPrice.map((pricedata, index) => {
+                                    return (
+                                      <>
+                                        <p>
+                                          SellingPrice:
+                                          {pricedata.sellingPrice}
+                                        </p>
+                                        <p>
+                                          MarkedPrice: {pricedata.markedPrice}
+                                        </p>
+                                      </>
+                                    );
+                                  })}
+
+                                  <div class="snipcart-details top_brand_home_details">
+                                    <input
+                                      onClick={() => handleAddToCart(data)}
+                                      type="submit"
+                                      name="submit"
+                                      value="Add to cart"
+                                      class="button"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      );
+                    })}
                   </div>
-                  <div class="snipcart-details top_brand_home_details">
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input
-                          type="hidden"
-                          name="item_name"
-                          value="dogs food"
-                          />
-                        <input type="hidden" name="amount" value="9.00" />
-                        <input
-                          type="hidden"
-                          name="discount_amount"
-                          value="1.00"
-                          />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                        <input
-                          type="submit"
-                          name="submit"
-                          value="Add to cart"
-                          class="button"
-                          />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </figure>
+                </>
+              )}
             </div>
           </div>
         </div>
       </div>
-      </div>
-      )})}
     </div>
   );
 };

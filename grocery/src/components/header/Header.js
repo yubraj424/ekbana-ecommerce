@@ -66,10 +66,20 @@ const Header = () => {
           <ul>
             <li class="menu-bar">
               <Link to="#" class="menu-bar">
-                <div class="dropdown">
+                <div className="dropdownn">
                   <i class="fa fa-user" aria-hidden="true"></i>
 
-                  <div class="dropdown-content">
+                  <div
+                    className="dropdown-contentt"
+                    style={{
+                      color: "black",
+                      width: "90px",
+                      marginLeft: "-40px",
+                      marginTop: "15px",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
                     <div class=" sub-menu-1 ">
                       <ul>
                         <li>
