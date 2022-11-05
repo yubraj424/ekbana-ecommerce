@@ -37,6 +37,7 @@ import Payment from "../components/payment/Payment";
 import Hotoffers from "../components/Hotoffers/Hotoffers";
 import Checkout from "../view/checkoutpage/Checkout";
 import Practice from "../components/practice/Practice";
+import ForgetPassword from "../components/loginpageandsignup/ForgetPassword";
 
 const Routers = () => {
   return (
@@ -61,13 +62,13 @@ const Routers = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/shortcode" element={<ShortCode />} />
 
-            <Route path="/bread" element={<Bread />} />
+            {/* <Route path="/bread" element={<Bread />} />
             <Route path="/drinks" element={<Drinks />} />
             <Route path="/frozen" element={<Frozen />} />
             <Route path="/household" element={<Household />} />
             <Route path="/kitchen" element={<Kitchen />} />
             <Route path="/pet" element={<Pet />} />
-            <Route path="/vegetables" element={<Vegetables />} />
+            <Route path="/vegetables" element={<Vegetables />} /> */}
             <Route path="/faq" element={<Faq />} />
 
             <Route path="/category" element={<Categories />} />
@@ -77,6 +78,7 @@ const Routers = () => {
             <Route path="/hotoffers" element={<Hotoffers />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/practice" element={<Practice />} />
+            <Route path="/forgetpassword" element={<ForgetPassword />} />
           </Routes>
         </div>
       </div>

@@ -93,7 +93,7 @@ const Login = () => {
             )}
 
             <div class="cta">
-              <a href="#">Forgot your password?</a>
+              <a href="/forgetpassword">Forgot your password?</a>
             </div>
           </div>
         </div>

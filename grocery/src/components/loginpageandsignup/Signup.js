@@ -45,6 +45,7 @@ const Signup = () => {
       )
       .then((response) => {
         console.log(response, "sigup sucess");
+        localStorage.setItem("signup_email", data.email);
         localStorage.setItem(
           "signupinfo",
           JSON.stringify({
