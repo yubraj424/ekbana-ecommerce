@@ -69,17 +69,7 @@ const Header = () => {
                 <div className="dropdownn">
                   <i class="fa fa-user" aria-hidden="true"></i>
 
-                  <div
-                    className="dropdown-contentt"
-                    style={{
-                      color: "black",
-                      width: "90px",
-                      marginLeft: "-40px",
-                      marginTop: "15px",
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                  >
+                  <div className="dropdown-contentt">
                     <div class=" sub-menu-1 ">
                       <ul>
                         <li>

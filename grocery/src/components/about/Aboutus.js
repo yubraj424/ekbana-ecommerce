@@ -3,7 +3,18 @@ import React from "react";
 function Aboutus() {
   return (
     <div>
-      <h3>About Us</h3>
+      <h2
+        style={{
+          display: "flex",
+          fontSize: "35px",
+          width: "200px",
+          padding: "10px",
+          justifyContent: "center",
+          margin: "auto",
+        }}
+      >
+        About Us
+      </h2>
       <div class="privacy about">
         <div>
           <p class="animi">
