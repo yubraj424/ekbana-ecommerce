@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Product from "../Product";
 
 const Drinks = () => {
   return (
-    <div>Drinks</div>
-  )
-}
+    <div>
+      <Product />
+    </div>
+  );
+};
 
-export default Drinks
+export default Drinks;

@@ -3,15 +3,14 @@
 }
 
 .product-Desc {
-  /* background-color: yellow;
-  display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .productPrice {
   /* /background-color: aqua;
-  /display: flex; */
+    /display: flex; */
   justify-content: space-between;
   gap: 10px;
 }
@@ -23,7 +22,7 @@
   width: 50%;
   height: 90%;
   /* /background-color: aquamarine;
-  /margin-top: 10px; */
+    /margin-top: 10px; */
 }
 .product-cart-top {
   margin-top: 10px;

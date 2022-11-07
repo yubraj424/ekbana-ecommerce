@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Product from "../Product";
 
 const Bread = () => {
   return (
-    <div>Bread</div>
-  )
-}
+    <div>
+      <Product />
+    </div>
+  );
+};
 
-export default Bread
+export default Bread;

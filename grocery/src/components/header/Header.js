@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./header.css";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -17,10 +18,32 @@ import {
 import MyCart from "../mycart/Mycart";
 
 const Header = () => {
+  // for fix header while scrolling
+  // const [fix, setFix] = useState(false);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setFix(window.scrollY > 300);
+  //     // console.log(window.scrollY);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // });
+
+  // --fix header
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const Navigate = useNavigate();
   return (
-    <div>
+    <div
+      style={{
+        position: "fixed",
+        overflow: "hidden",
+        width: "100%",
+        top: "0",
+        zIndex: "9999",
+      }}
+    >
       <div class="agileits_header">
         <div class="w3l_offers">
           <Link to="/category">Today's special Offers !</Link>
@@ -94,6 +117,7 @@ const Header = () => {
           class="w3l_header_right1"
           style={{
             marginTop: "2rem",
+            height: "3rem",
           }}
         >
           <h2 style={{ width: "6rem" }}>

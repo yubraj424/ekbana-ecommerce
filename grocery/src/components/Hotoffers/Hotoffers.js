@@ -11,6 +11,7 @@ const Hotoffers = () => {
   const Navigate = useNavigate();
 
   const dispatch = useDispatch();
+  // login compulsary before  accessingaddtocart
   const handleAddToCart = (data) => {
     if (localStorage.getItem("access_token") !== null) {
       dispatch(addToCart(data));
@@ -36,7 +37,7 @@ const Hotoffers = () => {
       )
       .then((res) => {
         console.log(res.data.data);
-        setSellingitem(res.data.data.slice(0, 6));
+        setSellingitem(res.data.data.slice(10, 14));
         setIsLoading(!isLoading);
       })
       .catch((err) => {
@@ -78,7 +79,7 @@ const Hotoffers = () => {
                 </>
               ) : (
                 <>
-                  <div>
+                  <div className="piece">
                     {sellingitem.map((data, index) => {
                       return (
                         <>

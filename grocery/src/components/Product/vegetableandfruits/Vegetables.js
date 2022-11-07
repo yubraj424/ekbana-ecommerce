@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Product from "../Product";
 
 const Vegetables = () => {
   return (
-    <div>Vegetables</div>
-  )
-}
+    <div>
+      <Product />
+    </div>
+  );
+};
 
-export default Vegetables
+export default Vegetables;

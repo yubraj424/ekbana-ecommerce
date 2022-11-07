@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Product from "../Product";
 
 const Pet = () => {
   return (
-    <div>Pet</div>
-  )
-}
+    <div>
+      <Product />
+    </div>
+  );
+};
 
-export default Pet
+export default Pet;
