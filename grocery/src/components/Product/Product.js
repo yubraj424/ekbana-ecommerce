@@ -37,7 +37,7 @@ const Hotoffers = () => {
       )
       .then((res) => {
         console.log(res.data.data);
-        setSellingitem(res.data.data.slice(10, 14));
+        setSellingitem(res.data.data.slice(10, 15));
         setIsLoading(!isLoading);
       })
       .catch((err) => {
@@ -85,7 +85,14 @@ const Hotoffers = () => {
                         <>
                           <div class="col-md-4 top_brand_left product-cart">
                             <div class="hover14 column">
-                              <div class="agile_top_brand_left_grid">
+                              <div
+                                class="agile_top_brand_left_grid"
+                                style={{
+                                  width: "70%",
+                                  display: "flex",
+                                  flexWrap: "wrap",
+                                }}
+                              >
                                 <div class="agile_top_brand_left_grid_pos">
                                   <img
                                     src="assets/images/offer.png"
@@ -93,7 +100,10 @@ const Hotoffers = () => {
                                     class="img-responsive"
                                   />
                                 </div>
-                                <div class="product-Desc">
+                                <div
+                                  class="product-Desc"
+                                  style={{ width: "70%" }}
+                                >
                                   {data.images.map((imgdata, index) => {
                                     return (
                                       <>

@@ -52,9 +52,12 @@ const Hotoffers = () => {
           <h2
             style={{
               display: "flex",
+              width: "100%",
               justifyContent: "center",
               fontSize: "32px",
               textDecoration: "underline",
+              alignItems: "center",
+              margin: "auto",
             }}
           >
             Hot Offers
@@ -85,7 +88,10 @@ const Hotoffers = () => {
                         <>
                           <div class="col-md-4 top_brand_left product-cart">
                             <div class="hover14 column">
-                              <div class="agile_top_brand_left_grid">
+                              <div
+                                class="agile_top_brand_left_grid"
+                                className="hotoffers-container"
+                              >
                                 <div class="agile_top_brand_left_grid_pos">
                                   <img
                                     src="assets/images/offer.png"
@@ -96,23 +102,37 @@ const Hotoffers = () => {
                                 <div class="product-Desc">
                                   {data.images.map((imgdata, index) => {
                                     return (
-                                      <>
+                                      <div>
                                         <img
                                           src={imgdata.imageName}
                                           alt=""
                                           width="100px"
                                           height="70px"
                                         />
-                                      </>
+                                      </div>
                                     );
                                   })}
 
-                                  <p>ItemName:{data.title}</p>
+                                  <p
+                                    style={{
+                                      display: "flex",
+                                      justifyContent: "start",
+                                      alignContent: "start",
+                                    }}
+                                  >
+                                    ItemName:{data.title}
+                                  </p>
                                   <p>Category: {data.categoryTitle}</p>
 
                                   {data.unitPrice.map((pricedata, index) => {
                                     return (
-                                      <>
+                                      <div
+                                        style={{
+                                          display: "flex",
+                                          flexDirection: "column",
+                                          alignItems: "start",
+                                        }}
+                                      >
                                         <p>
                                           SellingPrice:
                                           {pricedata.sellingPrice}
@@ -120,7 +140,7 @@ const Hotoffers = () => {
                                         <p>
                                           MarkedPrice: {pricedata.markedPrice}
                                         </p>
-                                      </>
+                                      </div>
                                     );
                                   })}
 

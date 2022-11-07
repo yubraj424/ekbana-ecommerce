@@ -2,8 +2,8 @@
   width: 1000px;
   display: flex;
   justify-content: space-between;
-  /* position: relative; */
-  height: 40vh;
+
+  height: 100vh;
 }
 .allcategorylist {
   width: 30%;
@@ -11,13 +11,13 @@
 .category-containeror {
   display: flex;
   flex-wrap: wrap;
-  /* height: 50px; */
+
   width: 70%;
+  height: 130px;
 
   margin-top: 15px;
   border-radius: 1px solid black;
   position: absolute;
-  /* margin-left: 10%; */
 }
 .product-Desc {
   display: flex;

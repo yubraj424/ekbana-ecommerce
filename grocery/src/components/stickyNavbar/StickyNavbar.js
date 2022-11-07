@@ -35,54 +35,54 @@ const StickyNavbar = () => {
             </div>
             <div className="dropdown">
               <div>
-                <Link to="/household">Households</Link>
+                <Link to="/product">Households</Link>
               </div>
             </div>
             <div class="dropdown">
               <h6> Veggies & Fruits</h6>
               <div class="dropdown-content">
                 <div>
-                  <Link to="/vegetables">Vegetables</Link>
+                  <Link to="/product">Vegetables</Link>
                 </div>
 
                 <div>
-                  <Link to="/vegetables">Fruits</Link>
+                  <Link to="/product">Fruits</Link>
                 </div>
               </div>
             </div>
             <div class="dropdown">
-              <Link to="/kitchen">Kitchen</Link>
+              <Link to="/product">Kitchen</Link>
             </div>
             <div class="dropdown">
-              <Link to="/shortcode">Short Codes</Link>
+              <Link to="/product">Short Codes</Link>
             </div>
             <div class="dropdown">
               <h6>Beverages</h6>
               <div class="dropdown-content">
                 <div>
-                  <Link to="/drinks">Soft Drinks</Link>
+                  <Link to="/product">Soft Drinks</Link>
                 </div>
                 <div>
-                  <Link to="/drinks">Juices</Link>
+                  <Link to="/product">Juices</Link>
                 </div>
               </div>
             </div>
             <div class="dropdown">
-              <Link to="/pet">Pet Food</Link>
+              <Link to="/product">Pet Food</Link>
             </div>
             <div class="dropdown">
               <h6>Frozen food</h6>
               <div class="dropdown-content">
                 <div>
-                  <Link to="/frozen">Frozen Snacks</Link>
+                  <Link to="/product">Frozen Snacks</Link>
                 </div>
                 <div>
-                  <Link to="/frozen">Frozen Nonveg</Link>
+                  <Link to="/product">Frozen Nonveg</Link>
                 </div>
               </div>
             </div>
             <div class="dropdown">
-              <Link to="/bread">Bread & Bakery</Link>
+              <Link to="/product">Bread & Bakery</Link>
             </div>
           </div>
         </nav>
