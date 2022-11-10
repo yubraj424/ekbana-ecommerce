@@ -22,7 +22,7 @@ const Signup = () => {
       data.email !== "" &&
       data.password !== ""
     ) {
-      toast.success("successfully submitted");
+      toast.success("successfully submitted", { position: "bottom-right" });
       navigate("/Login");
       reset();
 

@@ -37,6 +37,7 @@ const Header = () => {
   return (
     <div
       style={{
+        height: "60px",
         position: "fixed",
         overflow: "hidden",
         width: "100%",

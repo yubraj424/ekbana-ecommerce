@@ -12,43 +12,43 @@ const Topproducts = () => {
                 <ul>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="products.html">All Brands</a>
+                    <a href="/product">All Brands</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="vegetables.html">Vegetables</a>
+                    <a href="/product">Vegetables</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="vegetables.html">Fruits</a>
+                    <a href="/product">Fruits</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="drinks.html">Juices</a>
+                    <a href="/product">Juices</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="pet.html">Pet Food</a>
+                    <a href="/product">Pet Food</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="bread.html">Bread & Bakery</a>
+                    <a href="/product">Bread & Bakery</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="household.html">Cleaning</a>
+                    <a href="/product">Cleaning</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="products.html">Spices</a>
+                    <a href="/product">Spices</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="products.html">Dry Fruits</a>
+                    <a href="/product">Dry Fruits</a>
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i>
-                    <a href="products.html">Dairy Products</a>
+                    <a href="/productproduct">Dairy Products</a>
                   </li>
                 </ul>
               </div>

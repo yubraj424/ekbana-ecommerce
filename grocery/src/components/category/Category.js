@@ -26,7 +26,6 @@ const Category = () => {
       .then((response) => {
         console.log(response.data.data, "catagory");
         setCategorylist(response.data.data);
-        // console.log(catagorylist, "nepal");
         setIsLoading(!isLoading);
       })
       .catch((error) => {

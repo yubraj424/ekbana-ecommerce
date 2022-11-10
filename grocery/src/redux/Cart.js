@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { toast} from "react-toastify"
+import { toast } from "react-toastify";
 
 const initialState = {
   cartitem: localStorage.getItem("CartItemInfo")
@@ -15,7 +15,6 @@ const cartSlice = createSlice({
     addToCart(state, action) {
       const itemIndex = state.cartitem.findIndex(
         (item) => item.id === action.payload.id
-
       );
 
       if (itemIndex >= 0) {
@@ -27,19 +26,17 @@ const cartSlice = createSlice({
       localStorage.setItem("CartItemInfo", JSON.stringify(state.cartitem));
 
       // for popup notification using toastify
-      toast.success(`${action.payload.title} added successfully`,{
-        position:"top-center"
-
-      })
+      toast.success(`${action.payload.title} added successfully`, {
+        position: "bottom-right",
+      });
     },
     // clearcart(whole items)
     clearCart(state, action) {
       state.cartitem = [];
       localStorage.setItem("CartItemInfo", JSON.stringify(state.cartitem));
-      toast.error("All items removed ",{
-        position:"top-center"
-
-      })
+      toast.error("All items removed ", {
+        position: "bottom-right",
+      });
     },
     // delete individual items
     deleteItem(state, action) {
@@ -48,31 +45,28 @@ const cartSlice = createSlice({
       );
       state.cartitem = nextCartItem;
       localStorage.setItem("CartItemInfo", JSON.stringify(state.cartitem));
-      toast.info(`${action.payload.title} removed successfully`,{
-        position:"top-center"
-      })
-
+      toast.info(`${action.payload.title} removed successfully`, {
+        position: "bottom-right",
+      });
     },
     // increase individual items quantity
-    increaseQuantity(state,action){
+    increaseQuantity(state, action) {
       const itemIndex = state.cartitem.findIndex(
-        (cartitem)=>cartitem.id=== action.payload.id
-      )
-      if (state.cartitem[itemIndex].cartQuantity>=1){
+        (cartitem) => cartitem.id === action.payload.id
+      );
+      if (state.cartitem[itemIndex].cartQuantity >= 1) {
         state.cartitem[itemIndex].cartQuantity += 1;
-        
       }
       localStorage.setItem("CartItemInfo", JSON.stringify(state.cartitem));
     },
 
     // dercrease quantity
-    decreaseQuantity(state,action){
+    decreaseQuantity(state, action) {
       const itemIndex = state.cartitem.findIndex(
-        (cartitem)=>cartitem.id=== action.payload.id
-      )
-      if (state.cartitem[itemIndex].cartQuantity>1){
+        (cartitem) => cartitem.id === action.payload.id
+      );
+      if (state.cartitem[itemIndex].cartQuantity > 1) {
         state.cartitem[itemIndex].cartQuantity -= 1;
-        
       }
       localStorage.setItem("CartItemInfo", JSON.stringify(state.cartitem));
     },
@@ -80,6 +74,12 @@ const cartSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { clearCart, addToCart, deleteItem,decreaseQuantity,increaseQuantity } = cartSlice.actions;
+export const {
+  clearCart,
+  addToCart,
+  deleteItem,
+  decreaseQuantity,
+  increaseQuantity,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

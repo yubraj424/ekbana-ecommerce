@@ -90,24 +90,11 @@ const MyCart = () => {
                     </>
                   );
                 })}
-
-                {/* <div className="cart-product-quantity">
-                <button onClick={() => handleDecreaseitem(cartitems)}>
-                  -
-                </button>
-                <div className="count">{cartitems.cartQuantity}</div>
-                <button onClick={() => handleIncreaseitem(cartitems)}>
-                  +
-                </button>
-              </div> */}
-                {/* <div className="cart-product-total-price">
-                ${cartitems.price * cartitems.cartQuantity}
-              </div> */}
               </div>
             ))}
           </div>
           <div className="cart-summary">
-            {/* cart totally clear garda k he patuna pardaina  /} */}
+            {/*  nothing should be sent  for clear cart totally   /} */}
             <button className="clear-cart" onClick={() => handleCartClear()}>
               Clear Cart
             </button>

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Signup from "./Signup";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { Center } from "@chakra-ui/react";
 const Login = () => {
   const [login, setLogin] = useState(true);
   const logHandler = () => {
@@ -21,7 +22,9 @@ const Login = () => {
 
   const onSubmitlogin = (data) => {
     if (data.email !== "" && data.password !== "") {
-      toast.success("form submitted successfully");
+      toast.success("form submitted successfully", {
+        position: "bottom-right",
+      });
       reset();
       navigate("/");
     } else {
